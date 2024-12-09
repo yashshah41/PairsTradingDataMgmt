@@ -29,10 +29,8 @@ def main():
         
         symbols = list(set([stock for pair in pairs for stock in pair] + ['SPY']))
         
-        print(f"Fetching stock data for {symbols} from {start_date} to {end_date}...")
         try:
             price_data = data_manager.fetch_stock_data(symbols, start_date, end_date)
-            print("Data fetched successfully!")
         except Exception as e:
             print(f"Error fetching data: {str(e)}")
             return
@@ -56,10 +54,8 @@ def main():
         X = pd.DataFrame([d['features'] for d in training_data])
         y = pd.Series([d['success'] for d in training_data])
 
-        print("Training ML model...")
         analyzer.train_model(X, y)
 
-        print("\nAnalyzing pairs...")
         for stock1, stock2 in pairs:
             print(f"\nAnalyzing pair: {stock1}-{stock2}")
             try:
