@@ -107,18 +107,3 @@ The system generates comprehensive performance metrics including:
   - Average trade return
   - Average winning/losing trade
 
-## Dependencies
-
-- pandas
-- numpy
-- yfinance
-- scikit-learn
-- statsmodels
-- sqlite3
-
-## Notes
-
-- Ensure sufficient historical data is available for reliable analysis
-- Monitor system memory usage when processing large datasets
-- Regular database maintenance may be required for optimal performance
-- Consider market conditions and liquidity when selecting trading pairs
